@@ -20,7 +20,7 @@ const studenti = [
     },
     {
         id: 145,
-        name: "Gaia Borromini ",
+        name: "Gaia Borromini",
         grades: 74,
     },
     {
@@ -40,18 +40,30 @@ const studenti = [
     },
 ];
 
-console.log(studenti);
-
 /*
 Per preparare l'aula di un nuovo corso abbiamo bisogno dei seguenti dati:
 
-Un array di stringhe contenente il loro nome tutto in maiuscolo. ES (Marco della Rovere => MARCO DELLA ROVERE);
 
-Un array di oggetti "studente" che hanno un totale di voti superiore a 70
+Un array di stringhe contenente il loro nome tutto in maiuscolo. ES (Marco della Rovere => MARCO DELLA ROVERE);*/
+let nameUpperCase = studenti.map((studenti,) => {
 
-Un array di oggetti "studente" che hanno un totale di voti superiore a 70 e id superiore a 120
+    let onlyNameUpper = (studenti.name.toUpperCase());
 
-Questo è l'elenco degli studenti:
+    return onlyNameUpper;
+
+});
+console.log(nameUpperCase);
+
+
+
+
+
+
+// Un array di oggetti "studente" che hanno un totale di voti superiore a 70
+
+// Un array di oggetti "studente" che hanno un totale di voti superiore a 70 e id superiore a 120
+
+/*Questo è l'elenco degli studenti:
 | Id  | Name                  | Grades |
 | --- | --------------------- | ------ |
 | 213 | Marco della Rovere    | 78     |
