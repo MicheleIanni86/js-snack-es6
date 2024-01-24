@@ -40,12 +40,12 @@ const studenti = [
     },
 ];
 
-/*
-Per preparare l'aula di un nuovo corso abbiamo bisogno dei seguenti dati:
 
 
-Un array di stringhe contenente il loro nome tutto in maiuscolo. ES (Marco della Rovere => MARCO DELLA ROVERE);*/
-let nameUpperCase = studenti.map((studenti,) => {
+
+// 1°STEP
+// Un array di stringhe contenente il loro nome tutto in maiuscolo. ES (Marco della Rovere => MARCO DELLA ROVERE);*/
+let nameUpperCase = studenti.map((studenti) => {
 
     let onlyNameUpper = (studenti.name.toUpperCase());
 
@@ -56,12 +56,49 @@ console.log(nameUpperCase);
 
 
 
-
-
-
+// 2°STEP
 // Un array di oggetti "studente" che hanno un totale di voti superiore a 70
+let nameHighGrades = studenti.filter((studenti) => {
 
+
+    if (studenti.grades > 70) {
+        return true;
+    } else {
+
+        return false;
+    }
+});
+
+let onlyName = nameHighGrades.map((studente, index) => {
+
+    return studente.name.toUpperCase();
+});
+
+console.log(onlyName);
+
+
+
+// 3°STEP
 // Un array di oggetti "studente" che hanno un totale di voti superiore a 70 e id superiore a 120
+
+let nameHighGradesId = studenti.filter((studenti) => {
+
+
+    if (studenti.grades > 70 && studenti.id > 120) {
+        return true;
+    } else {
+
+        return false;
+    }
+
+});
+
+let onlyNameForId = nameHighGradesId.map((studente) => {
+
+    return studente.name.toUpperCase();
+});
+
+console.log(onlyNameForId);
 
 /*Questo è l'elenco degli studenti:
 | Id  | Name                  | Grades |
