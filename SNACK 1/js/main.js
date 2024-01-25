@@ -18,7 +18,8 @@ const vips = [
 
 const newListObj = vips.map((vip, numTavolo) => {
 
-    let newObject = {
+    let newObject =
+    {
         nomeTavolo: 'Tavolo Vip',
         vip: vip,
         numTavolo: numTavolo + 1,
