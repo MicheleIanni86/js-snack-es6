@@ -41,6 +41,7 @@ const teams = [
 ];
 
 
+
 teams.forEach((team) => {
     team.score = randomNumbers(1, 100);
     team.foul = randomNumbers(1, 10);
@@ -49,9 +50,34 @@ teams.forEach((team) => {
 console.log(teams);
 
 
+/*Creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti, recuperandoli con il destructuring, e stampiamo tutto in console.*/
 
-/*Creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti, recuperandoli con il destructuring, e stampiamo tutto in console.
-BONUS
+const newArray = teams.map((team) => {
+    const { name, foul } = team;
+    console.log(name, foul);
+
+    let newTeam = {
+        name: name,
+        foul: foul,
+    };
+    return newTeam;
+});
+console.log(newArray);
+
+
+// const newArray = teams.map((team) => {
+//     const { name, foul } = team;
+//     console.log(name, foul);
+
+//     let newTeam = {
+//         name: name,
+//         foul: foul,
+//     };
+//     return newTeam;
+// });
+// console.log(newArray);
+
+/*BONUS
 Stampare in pagina oltre che in console!*/
 
 
