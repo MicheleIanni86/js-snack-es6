@@ -36,7 +36,34 @@ const bikes = [
     },
 ];
 
-console.log(bikes);
+
+let [{ peso: peso1 }, { peso: peso2 }, { peso: peso3 }, { peso: peso4 }, { peso: peso5 }, { peso: peso6 }, { peso: peso7 }, { peso: peso8 },] = bikes;
 
 
+let minWeight = peso1;
+
+bikes.forEach(function (bike) {
+
+    if (bike.peso < minWeight) {
+        minWeight = bike.peso;
+    }
+});
+
+
+console.log('Il peso minimo è: ' + minWeight);
+
+const bikesEgualWeigth = bikes.filter((bike) => {
+
+    let isBike = false;
+
+    if (minWeight == bike.peso) {
+        isBike = true;
+    }
+    return isBike;
+});
+
+const [nomeBiciFinale] = bikesEgualWeigth;
+
+console.log(nomeBiciFinale.nome.toUpperCase())
 /*Stampare in console la bici con peso minore utilizzando destructuring e template literal*/
+
