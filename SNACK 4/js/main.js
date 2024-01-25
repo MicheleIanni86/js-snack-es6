@@ -52,6 +52,7 @@ console.log(teams);
 
 /*Creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti, recuperandoli con il destructuring, e stampiamo tutto in console.*/
 
+
 const newArray = teams.map((team) => {
     const { name, foul } = team;
     console.log(name, foul);
@@ -63,19 +64,6 @@ const newArray = teams.map((team) => {
     return newTeam;
 });
 console.log(newArray);
-
-
-// const newArray = teams.map((team) => {
-//     const { name, foul } = team;
-//     console.log(name, foul);
-
-//     let newTeam = {
-//         name: name,
-//         foul: foul,
-//     };
-//     return newTeam;
-// });
-// console.log(newArray);
 
 /*BONUS
 Stampare in pagina oltre che in console!*/
