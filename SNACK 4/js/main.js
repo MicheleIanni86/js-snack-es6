@@ -70,11 +70,11 @@ Stampare in pagina oltre che in console!*/
 
 
 
-
-
-
-// FUNZIONI
+// FUNZIONE NUMERI RANDOM
 function randomNumbers(min, max) {
     let numRand = Math.floor(Math.random() * (max - min + 1) + min);
     return numRand;
 }
+
+
+
